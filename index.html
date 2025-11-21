@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Computing</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+    .tab-btn { padding: 10px 20px; background: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .tab-btn:hover { background: #155bb5; }
+    .content { display: none; padding: 15px; background: #f3f3f3; border-radius: 5px; }
+    .active { display: block; }
+</style>
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+</head>
+<body>
+
+<h1>Cloud Computing</h1>
+
+<div class="tabs">
+    <button class="tab-btn" onclick="showTab('conceptos')">Conceptos</button>
+    <button class="tab-btn" onclick="showTab('remote')">Anydesk y TeamViewer</button>
+</div>
+
+<div id="conceptos" class="content active">
+    <h2>Conceptos</h2>
+    <p><b>¿Qué es Cloud Computing?</b> Servicio que permite acceder a recursos como servidores, bases de datos, redes y software a través de Internet.</p>
+
+    <p><b>SaaS:</b> Software como servicio.</p>
+    <p><b>PaaS:</b> Plataforma como servicio.</p>
+    <p><b>IaaS:</b> Infraestructura como servicio.</p>
+
+    <p><b>¿Qué es Virtualización?</b> Proceso que permite ejecutar varias máquinas virtuales sobre un mismo hardware físico.</p>
+
+    <p><b>¿Qué es Docker?</b> Plataforma de contenedores que permite crear, ejecutar y desplegar aplicaciones aisladas.</p>
+</div>
+
+<div id="remote" class="content">
+    <h2>Anydesk y TeamViewer</h2>
+
+    <p><b>Anydesk:</b> Herramienta para acceso remoto a computadoras.</p>
+
+    <p><b>TeamViewer:</b> Software de acceso remoto y soporte técnico.</p>
+</div>
+
+</body>
+</html>
